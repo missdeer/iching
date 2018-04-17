@@ -4,9 +4,9 @@ category: 周易
 order: 2
 ---
 
-![坎上震下](https://upload.wikimedia.org/wikipedia/commons/2/23/Yijing-03.png)
+![震下坎上](https://upload.wikimedia.org/wikipedia/commons/2/23/Yijing-03.png)
 
-## 坎上震下
+## 震下坎上
 
 * **屯**：元，亨，利，贞，勿用，有攸往，利建侯。
   * **彖曰** 屯，刚柔始交而难生，动乎险中，大亨贞。雷雨之动满盈，天造草昧，宜建侯而不宁。

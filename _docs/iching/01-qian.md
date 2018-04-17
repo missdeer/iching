@@ -4,9 +4,9 @@ category: 周易
 order: 2
 ---
 
-![乾上乾下](https://upload.wikimedia.org/wikipedia/commons/8/8f/Yijing-01.png)
+![乾下乾上](https://upload.wikimedia.org/wikipedia/commons/8/8f/Yijing-01.png)
 
-## 乾上乾下
+## 乾下乾上
 
 * **乾**：元，亨，利，贞。
 1. 初九：潜龙，勿用。
