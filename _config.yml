@@ -2,8 +2,8 @@
 # Site
 
 title: 周易
-url: "https://minidump.info"
-baseurl:
+url: "https://missdeer.github.io"
+baseurl: /iching
 #google_analytics_key: UA-52744860-1 
 show_full_navigation: true
 creator:  <a href="https://minidump.info" target="_blank">@missdeer</a>
