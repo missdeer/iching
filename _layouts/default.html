@@ -127,47 +127,60 @@
 						<p>支付宝扫一扫</p>
 					</div>
 				</div>
+				<div style="line-height:2.5;font-size:12px;">如果你有Visa、MasterCard之类的国际银行卡，也可以考虑以下选项：</div>
+				<div>
+					<script src="https://js.stripe.com/v3"></script>
+					<button id="buy-me-a-cocacola-button" title="请我喝罐可乐，需要Visa、MasterCard、JCB、AmericanExpress等国际银行卡"
+						role="link">
+						<span>可乐</span>
+					</button>
+					<script>
+						var stripe = Stripe('pk_live_tyj6HryOAzYDsRHA3uYjVHIq');
+
+						var buyMeACocacolaButton = document.querySelector('#buy-me-a-cocacola-button');
+						buyMeACocacolaButton.addEventListener('click', function () {
+							stripe.redirectToCheckout({
+								items: [{
+									sku: 'sku_FfVDZvhOKOxwCH',
+									quantity: 1
+								}],
+								successUrl: '{{ page.url | absolute_url }}',
+								cancelUrl: '{{ page.url | absolute_url }}'
+							});
+						});
+					</script>
+					<button id="buy-me-a-coffee-button" title="请我喝杯咖啡，需要Visa、MasterCard、JCB、AmericanExpress等国际银行卡"
+						role="link">
+						<span>咖啡</span>
+					</button>
+					<script>
+
+						var buyMeACoffeeButton = document.querySelector('#buy-me-a-coffee-button');
+						buyMeACoffeeButton.addEventListener('click', function () {
+							stripe.redirectToCheckout({
+								items: [{
+									sku: 'sku_FfVEVxmUzZB1pm',
+									quantity: 1
+								}],
+								successUrl: '{{ page.url | absolute_url }}',
+								cancelUrl: '{{ page.url | absolute_url }}'
+							});
+						});
+					</script>
+				</div>
 			</div>
-			<div style="line-height:2.5;font-size:12px;">如果你有Visa、MasterCard之类的国际银行卡，也可以考虑以下选项：</div>
-			<div>
-				<script src="https://js.stripe.com/v3"></script>
-				<button id="buy-me-a-cocacola-button" title="请我喝罐可乐，需要Visa、MasterCard、JCB、AmericanExpress等国际银行卡"
-					role="link">
-					<span>可乐</span>
-				</button>
-				<script>
-					var stripe = Stripe('pk_live_tyj6HryOAzYDsRHA3uYjVHIq');
-
-					var buyMeACocacolaButton = document.querySelector('#buy-me-a-cocacola-button');
-					buyMeACocacolaButton.addEventListener('click', function () {
-						stripe.redirectToCheckout({
-							items: [{
-								sku: 'sku_FfVDZvhOKOxwCH',
-								quantity: 1
-							}],
-							successUrl: '{{ page.url | absolute_url }}',
-							cancelUrl: '{{ page.url | absolute_url }}'
-						});
-					});
-				</script>
-				<button id="buy-me-a-coffee-button" title="请我喝杯咖啡，需要Visa、MasterCard、JCB、AmericanExpress等国际银行卡"
-					role="link">
-					<span>咖啡</span>
-				</button>
-				<script>
-
-					var buyMeACoffeeButton = document.querySelector('#buy-me-a-coffee-button');
-					buyMeACoffeeButton.addEventListener('click', function () {
-						stripe.redirectToCheckout({
-							items: [{
-								sku: 'sku_FfVEVxmUzZB1pm',
-								quantity: 1
-							}],
-							successUrl: '{{ page.url | absolute_url }}',
-							cancelUrl: '{{ page.url | absolute_url }}'
-						});
-					});
-				</script>
+		</div>
+		<div class="content">
+			</hr>
+			<div style="color:#b3b3b3; font-size:.7em;">
+				<p>Hosted by <a href="https://pages.github.com/" style="font-weight: bold">Github Pages</a>,
+					本站{% if site.creator %}由 {{site.creator}} 创建，由 <a href="https://jekyllrb.com"
+						target="_blank">Jekyll</a> 于 {{ site.time | date: "%F" }} 生成，{% endif %}感谢<a
+						href="https://github.com/CloudCannon" target="_blank"> CloudCannon </a>制作的theme： <a
+						href="https://github.com/CloudCannon/edition-jekyll-template" target="_blank">Edition</a> ，感谢<a
+						href="https://letsencrypt.org/" target="_blank"> Let's Encrypt </a>提供免费的SSL证书服务。本站点采用<a
+						href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">知识共享署名-非商业性使用-相同方式共享
+						4.0 国际许可协议</a>进行许可。&copy; {{site.time | date: "%Y"}}</p>
 			</div>
 		</div>
 	</section>
